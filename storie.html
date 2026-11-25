@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#08090A">
+  <title>Chi è tornato · eStage 2027</title>
+  <meta name="description" content="Storie di ticinesi tornati a casa.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="testata">
+    <div class="largo">
+      <a class="marchio" href="index.html"><span class="bandiera"><i></i><i></i></span>estage <small>2027 · prototipo</small></a>
+      <nav class="menu">
+        <a href="index.html">Stage</a>
+        <a href="storie.html" aria-current="page">Chi è tornato</a>
+        <a href="aziende.html">Per le aziende</a>
+        <a class="pulsante" href="https://forms.gle/sUXKSB8c5u3QgaUA6" target="_blank" rel="noopener">Avvisami</a>
+      </nav>
+      <button class="apri-menu" type="button" aria-label="Apri il menu" aria-expanded="false"><span></span></button>
+    </div>
+  </header>
+  <div class="tendina" id="tendina" role="dialog" aria-label="Menu">
+    <div class="testa"><span class="marchio"><span class="bandiera"><i></i><i></i></span>estage <small>2027 · prototipo</small></span><button class="chiudi" type="button" aria-label="Chiudi il menu">×</button></div>
+    <nav>
+      <a href="index.html">Stage</a>
+      <a href="storie.html" aria-current="page">Chi è tornato</a>
+      <a href="aziende.html">Per le aziende</a>
+    </nav>
+    <a class="pulsante" href="https://forms.gle/sUXKSB8c5u3QgaUA6" target="_blank" rel="noopener">Avvisami quando escono gli stage</a>
+  </div>
+
+  <section class="hero basso">
+    <div class="luce r"></div><div class="luce b"></div><div class="grana"></div>
+    <div class="largo">
+      <h1 class="gigante">partiti.<br><strong>poi tornati.</strong></h1>
+      <p class="lead">Tre ticinesi raccontano come sono tornati. Storie di OltreconfiniTi.</p>
+    </div>
+  </section>
+
+  <section class="sezione">
+    <div class="largo storie" id="storie"></div>
+  </section>
+
+  <footer class="piede">
+    <div class="largo">
+      <div class="grande">estage<span>.</span></div>
+      <div class="righe">
+        <span>Prototipo non ufficiale di Anna Vellani · non è un sito del Cantone Ticino</span>
+        <span><a href="index.html">Stage</a> · <a href="storie.html">Chi è tornato</a> · <a href="aziende.html">Per le aziende</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/dati.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>

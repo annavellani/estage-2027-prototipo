@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#08090A">
+  <title>eStage 2027</title>
+  <meta name="description" content="Stage pagati in Ticino per chi studia oltre Gottardo. Prototipo non ufficiale.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="testata">
+    <div class="largo">
+      <a class="marchio" href="index.html"><span class="bandiera"><i></i><i></i></span>estage <small>2027 · prototipo</small></a>
+      <nav class="menu">
+        <a href="index.html" aria-current="page">Stage</a>
+        <a href="storie.html">Chi è tornato</a>
+        <a href="aziende.html">Per le aziende</a>
+        <a class="pulsante" href="https://forms.gle/sUXKSB8c5u3QgaUA6" target="_blank" rel="noopener">Avvisami</a>
+      </nav>
+      <button class="apri-menu" type="button" aria-label="Apri il menu" aria-expanded="false"><span></span></button>
+    </div>
+  </header>
+  <div class="tendina" id="tendina" role="dialog" aria-label="Menu">
+    <div class="testa"><span class="marchio"><span class="bandiera"><i></i><i></i></span>estage <small>2027 · prototipo</small></span><button class="chiudi" type="button" aria-label="Chiudi il menu">×</button></div>
+    <nav>
+      <a href="index.html" aria-current="page">Stage</a>
+      <a href="storie.html">Chi è tornato</a>
+      <a href="aziende.html">Per le aziende</a>
+    </nav>
+    <a class="pulsante" href="https://forms.gle/sUXKSB8c5u3QgaUA6" target="_blank" rel="noopener">Avvisami quando escono gli stage</a>
+  </div>
+
+  <section class="hero">
+    <div class="luce r"></div><div class="luce b"></div><div class="grana"></div>
+    <div class="largo">
+      <h1 class="gigante">torna per l'estate.<br><strong>poi decidi.</strong></h1>
+      <p class="lead">Stage pagati in Ticino per chi studia oltre Gottardo.</p>
+      <div class="sotto-hero">
+        <div class="consiglio" aria-live="polite"><b>Consiglio</b><p></p></div>
+        <a class="giu" href="#stage">Trova il tuo stage <span>↓</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sezione" id="stage">
+    <div class="largo">
+      <div class="capo">
+        <h2 class="titolo">cerca per quello<br>che <strong>sai fare.</strong></h2>
+        <p>Non per settore. Aggiornato al <span data-aggiornato></span>.</p>
+      </div>
+
+      <div class="ricerca">
+        <label class="campo">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+          <input id="cerca" type="search" placeholder="Cerca azienda, ruolo o luogo" aria-label="Cerca" autocomplete="off">
+        </label>
+        <select id="studi" class="menu-studi" aria-label="Cosa studi"><option value="">Cosa studi?</option></select>
+      </div>
+      <div class="chips" id="chips" aria-label="Cosa sai fare"></div>
+
+      <p class="esito" id="esito"></p>
+      <div class="elenco" id="posizioni"></div>
+    </div>
+  </section>
+
+  <section class="sezione carta">
+    <div class="largo">
+      <div class="capo">
+        <h2 class="titolo">chi offre <strong>stage.</strong></h2>
+        <p id="conta-partner"></p>
+      </div>
+      <div class="partner" id="partner"></div>
+    </div>
+  </section>
+
+  <section class="sezione scura">
+    <div class="largo chiusura">
+      <h2 class="titolo">i nuovi stage,<br><strong>prima degli altri.</strong></h2>
+      <a class="pulsante" href="https://forms.gle/sUXKSB8c5u3QgaUA6" target="_blank" rel="noopener">Avvisami <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+    </div>
+  </section>
+
+  <footer class="piede">
+    <div class="largo">
+      <div class="grande">estage<span>.</span></div>
+      <div class="righe">
+        <span>Prototipo non ufficiale di Anna Vellani · non è un sito del Cantone Ticino</span>
+        <span><a href="index.html" aria-current="page">Stage</a> · <a href="storie.html">Chi è tornato</a> · <a href="aziende.html">Per le aziende</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/dati.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#08090A">
+  <title>Per le aziende · eStage 2027</title>
+  <meta name="description" content="Offri uno stage a chi studia oltre Gottardo.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="testata">
+    <div class="largo">
+      <a class="marchio" href="index.html"><span class="bandiera"><i></i><i></i></span>estage <small>2027 · prototipo</small></a>
+      <nav class="menu">
+        <a href="index.html">Stage</a>
+        <a href="storie.html">Chi è tornato</a>
+        <a href="aziende.html" aria-current="page">Per le aziende</a>
+        <a class="pulsante" href="https://forms.gle/sUXKSB8c5u3QgaUA6" target="_blank" rel="noopener">Avvisami</a>
+      </nav>
+      <button class="apri-menu" type="button" aria-label="Apri il menu" aria-expanded="false"><span></span></button>
+    </div>
+  </header>
+  <div class="tendina" id="tendina" role="dialog" aria-label="Menu">
+    <div class="testa"><span class="marchio"><span class="bandiera"><i></i><i></i></span>estage <small>2027 · prototipo</small></span><button class="chiudi" type="button" aria-label="Chiudi il menu">×</button></div>
+    <nav>
+      <a href="index.html">Stage</a>
+      <a href="storie.html">Chi è tornato</a>
+      <a href="aziende.html" aria-current="page">Per le aziende</a>
+    </nav>
+    <a class="pulsante" href="https://forms.gle/sUXKSB8c5u3QgaUA6" target="_blank" rel="noopener">Avvisami quando escono gli stage</a>
+  </div>
+
+  <section class="hero basso">
+    <div class="grana"></div>
+    <div class="largo">
+      <h1 class="gigante">offri uno stage<br><strong>a chi studia fuori.</strong></h1>
+      <p class="lead">Pubblica la tua offerta su eStage: la controlliamo noi e la mettiamo online.</p>
+      <div class="sotto-hero"><span></span><a class="giu" href="#modulo">Compila l'offerta <span>↓</span></a></div>
+    </div>
+  </section>
+
+  <section class="sezione">
+    <div class="largo">
+      <div class="capo"><h2 class="titolo">come <strong>funziona.</strong></h2></div>
+      <div class="passi">
+        <div class="passo"><h3>Compili l'offerta.</h3><p>Il modulo qui sotto: cinque minuti. Indichi anche le competenze che cerchi.</p></div>
+        <div class="passo"><h3>Il SIC la controlla.</h3><p>Il team di Estage verifica che sia uno stage retribuito e completo, e ti contatta se manca qualcosa.</p></div>
+        <div class="passo"><h3>Va online.</h3><p>L'offerta appare su eStage e arriva agli studenti che hanno le competenze giuste.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sezione carta" id="modulo">
+    <div class="largo">
+      <div class="capo"><h2 class="titolo">la tua <strong>offerta.</strong></h2><p>I campi con * sono obbligatori.</p></div>
+      <form class="modulo" id="form-azienda" novalidate>
+        <fieldset>
+          <legend>Chi offre lo stage</legend>
+          <label>Azienda o servizio *<input name="azienda" required autocomplete="organization"></label>
+          <label>Persona di contatto *<input name="contatto" required autocomplete="name"></label>
+          <label>Email *<input name="email" type="email" required autocomplete="email"></label>
+        </fieldset>
+        <fieldset>
+          <legend>Lo stage</legend>
+          <label class="intero">Titolo dello stage *<input name="titolo" required placeholder="Es. Stage in analisi dei dati"></label>
+          <label>Luogo *<input name="luogo" required placeholder="Es. Bellinzona"></label>
+          <label>Periodo *
+            <select name="periodo" required><option value="">Scegli</option><option>Estate</option><option>Pausa invernale (gennaio–febbraio)</option><option>Durante tutto l'anno</option></select>
+          </label>
+          <label>Durata *<input name="durata" required placeholder="Es. 2 mesi"></label>
+          <label>Retribuzione mensile (CHF) *<input name="paga" required inputmode="numeric" placeholder="Es. 2000"></label>
+          <label class="intero">Link all'annuncio o breve descrizione *<textarea name="descrizione" rows="4" required></textarea></label>
+        </fieldset>
+        <fieldset>
+          <legend>Cosa deve saper fare la persona? *</legend>
+          <div class="chips aperte">
+            <label class="chip-check"><input type="checkbox" name="competenze" value="dati"><span>Analisi dei dati</span></label>
+            <label class="chip-check"><input type="checkbox" name="competenze" value="scrittura"><span>Scrittura e comunicazione</span></label>
+            <label class="chip-check"><input type="checkbox" name="competenze" value="lingue"><span>Lingue</span></label>
+            <label class="chip-check"><input type="checkbox" name="competenze" value="diritto"><span>Diritto</span></label>
+            <label class="chip-check"><input type="checkbox" name="competenze" value="economia"><span>Economia e finanza</span></label>
+            <label class="chip-check"><input type="checkbox" name="competenze" value="scienze"><span>Scienze e ricerca</span></label>
+            <label class="chip-check"><input type="checkbox" name="competenze" value="tecnica"><span>Tecnica e ingegneria</span></label>
+            <label class="chip-check"><input type="checkbox" name="competenze" value="informatica"><span>Informatica</span></label>
+            <label class="chip-check"><input type="checkbox" name="competenze" value="design"><span>Design e creatività</span></label>
+            <label class="chip-check"><input type="checkbox" name="competenze" value="pubblico"><span>Contatto con il pubblico</span></label>
+          </div>
+        </fieldset>
+        <div class="invio">
+          <button class="pulsante scuro" type="submit">Invia per approvazione</button>
+          <p class="nota-invio" id="nota-invio" role="status"></p>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <footer class="piede">
+    <div class="largo">
+      <div class="grande">estage<span>.</span></div>
+      <div class="righe">
+        <span>Prototipo non ufficiale di Anna Vellani · non è un sito del Cantone Ticino</span>
+        <span><a href="index.html">Stage</a> · <a href="storie.html">Chi è tornato</a> · <a href="aziende.html">Per le aziende</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/dati.js"></script>
+  <script src="assets/app.js"></script>
+</body>
+</html>
