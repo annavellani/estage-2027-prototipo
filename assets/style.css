@@ -284,3 +284,20 @@ button { font: inherit; color: inherit; }
 .hero.basso { padding-top: 140px; }
 @media (max-width: 900px) { .storia:nth-child(even) { grid-template-columns: 1fr; } }
 @media (max-width: 640px) { .hero.basso { padding-top: 110px; } }
+
+/* Foto storie: inquadra il viso (in alto), niente tagli */
+.storia .foto img { object-position: 50% 18%; }
+@media (max-width: 900px) { .storia .foto { aspect-ratio: 1 / 1; max-width: 420px; } }
+
+/* Requisito e conferma prima di candidarsi */
+.requisito { font-size: 15px; color: var(--grigio); margin: calc(-1 * var(--s2)) 0 var(--s4); }
+.conferma { position: fixed; inset: 0; z-index: 40; background: #08090ACC; display: none; place-items: center; padding: var(--s3); }
+.conferma.aperta { display: grid; }
+.conferma .box { background: var(--bianco); border-radius: 16px; padding: var(--s5); max-width: 460px; width: 100%; }
+.conferma h3 { font-size: 26px; font-weight: 600; letter-spacing: -.02em; line-height: 1.15; }
+.conferma label { display: flex; gap: 12px; align-items: flex-start; margin: var(--s3) 0; font-size: 17px; cursor: pointer; }
+.conferma input { width: 22px; height: 22px; margin-top: 2px; accent-color: var(--rosso); flex-shrink: 0; }
+.conferma .azioni { display: flex; gap: var(--s2); align-items: center; flex-wrap: wrap; }
+.conferma .vai-annuncio { display: inline-flex; align-items: center; min-height: 52px; padding: 0 24px; border-radius: 999px; background: var(--rosso); color: var(--bianco); font-weight: 600; }
+.conferma .vai-annuncio[aria-disabled="true"] { background: var(--filo); color: var(--grigio); pointer-events: none; }
+.conferma .annulla { background: none; border: 0; font-weight: 600; cursor: pointer; min-height: 44px; color: var(--grigio); }

@@ -118,6 +118,25 @@ function moduloAziende() {
   });
 }
 
+// Conferma requisito prima di aprire l'annuncio (e conta i clic: il dato che oggi manca)
+function conferma() {
+  const box = $("#conferma"), lista = $("#posizioni");
+  if (!box || !lista) return;
+  const check = $("#conferma-check"), vai = $("#conferma-vai");
+  const chiudi = () => { box.classList.remove("aperta"); document.body.style.overflow = ""; };
+  lista.addEventListener("click", e => {
+    const a = e.target.closest("a.voce"); if (!a) return;
+    e.preventDefault();
+    vai.href = a.href; check.checked = false; vai.setAttribute("aria-disabled", "true");
+    box.classList.add("aperta"); document.body.style.overflow = "hidden"; check.focus();
+  });
+  check.addEventListener("change", () => vai.setAttribute("aria-disabled", String(!check.checked)));
+  vai.addEventListener("click", () => setTimeout(chiudi, 100));
+  $("#conferma-annulla").addEventListener("click", chiudi);
+  box.addEventListener("click", e => { if (e.target === box) chiudi(); });
+  document.addEventListener("keydown", e => { if (e.key === "Escape") chiudi(); });
+}
+
 // Menu telefono
 function tendina() {
   const t = $("#tendina"), apri = $(".apri-menu");
@@ -129,4 +148,4 @@ function tendina() {
 }
 
 document.querySelectorAll("[data-aggiornato]").forEach(el => el.textContent = D.aggiornato);
-consigli(); home(); storie(); moduloAziende(); tendina();
+consigli(); home(); storie(); moduloAziende(); conferma(); tendina();
